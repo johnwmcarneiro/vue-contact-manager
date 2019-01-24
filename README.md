@@ -1,5 +1,19 @@
 # vue-contact-manager
 
+## Screenshots
+
+#### Index
+![alt tag](./doc/screen_blank.png)
+
+#### New record
+![alt tag](./doc/screen_new.png)
+
+#### Show record
+![alt tag](./doc/screen_show.png)
+
+#### Edit record
+![alt tag](./doc/screen_edit.png)
+
 ## Project setup
 ```
 npm install
