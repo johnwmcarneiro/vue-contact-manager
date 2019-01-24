@@ -2,13 +2,18 @@
 <div class="ui fluid card" v-if="contact">
   <sui-card-content>
     <sui-card-header>{{ contact.name }}</sui-card-header>
-    <sui-card-meta>{{ contact.company }} | {{ contact.role }}</sui-card-meta>
+    <sui-card-meta>
+      <sui-list divided horizontal v-if="contact.company || contact.role">
+        <sui-list-item v-show="contact.company">{{ contact.company }}</sui-list-item>
+        <sui-list-item v-show="contact.role">{{ contact.role }}</sui-list-item>
+      </sui-list>
+    </sui-card-meta>
     <sui-card-description>
       <sui-list>
-        <sui-list-item>
+        <sui-list-item v-show="contact.phone">
           <sui-icon name="phone" /> {{ contact.phone }}
         </sui-list-item>
-        <sui-list-item>
+        <sui-list-item v-show="contact.email">
           <sui-icon name="envelope" /> {{ contact.email }}
         </sui-list-item>
       </sui-list>
@@ -39,6 +44,15 @@
 <script>
 export default {
   name: 'Contact',
-  props: ['contact', 'onEdit', 'onDelete']
+  props: ['contact'],
+  methods: {
+    onEdit (contact) {
+      this.$emit('edit', contact)
+    },
+
+    onDelete (contact) {
+      this.$emit('delete', contact)
+    }
+  }
 }
 </script>
