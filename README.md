@@ -1,5 +1,9 @@
 # vue-contact-manager
 
+Project para estudo do Vue.js with Vuex. It's a simple contact manager, data is written to local storage. 
+
+If you want it to be easily integrable with your api, just change the actions to interact with your api.
+
 ## Screenshots
 
 #### Index
@@ -13,6 +17,20 @@
 
 #### Edit record
 ![alt tag](./doc/screen_edit.png)
+
+## Requirements
+
+- Node
+- NPM or Yarn
+
+## Dependencies
+
+- vue (2.5.21)
+- vue-router (3.0.1)
+- vuex (3.0.1)
+- vuex-persistedstate (2.5.4)
+- semantic-ui-css (2.4.1)
+- semantic-ui-vue (0.7.0)
 
 ## Project setup
 ```
@@ -38,6 +56,3 @@ npm run test
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
